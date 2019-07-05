@@ -4,7 +4,7 @@
 
 This repo contains the class activities for students in the Road to Hire Code academy.
 
-The repo is updated weekly for new activites.
+The repo is updated daily with activity solutions and weekly for new activites.
 
 ## Clone this repo
 
@@ -17,7 +17,7 @@ git clone https://github.com/pdhoward/codeactivity.git
 
 ## Sync with this repo
 
-Once you have cloned the repo, you can periodically sync the content on your desktop through the git pull command
+Once you have cloned the repo, you can periodically sync the content on your desktop with this repo through the git pull command
 
 ----
 
