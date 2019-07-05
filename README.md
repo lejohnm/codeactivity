@@ -9,6 +9,7 @@ The repo is updated weekly for new activites.
 ## Clone this repo
 
 Clone this repo to your desktop by copying the url from the green button above and using git clone .. or just copy this command into your terminal
+
 ----
 git clone https://github.com/pdhoward/codeactivity.git
 
