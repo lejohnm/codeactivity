@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Vacations</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+      
+      var vacation = confirm("Do you like to travel?");
+      
+      if (vacation) {
+        document.write("Here's a travel brochure");
+      }
+      // If the above condition isn't met (eatSteak !== true), run the following block of code instead.
+      else {
+        document.write("Here's some ideas for a staycation!");
+      }
+      // Bonus
+      // Here we ask the user what year they were born, and store their response to a variable.
+      var birthYear = prompt("What year were you born?");
+      // If the user was born before 2001!"
+      if (birthYear < 2001) {
+        alert("Have fun on your trips!");
+      }
+      // Else if the user was born after 2001 ...."
+      else if (birthYear > 2001) {
+        alert("Be sure to bring your permission form from a parent or guardian!");
+      }
+      // If neither of the previous conditions was met ... must have ben born in 2001"
+      else {
+        alert("Hey - You're good to go!");
+      }
+    </script>
+
+  </body>
+</html>
