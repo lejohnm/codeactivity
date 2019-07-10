@@ -8,8 +8,10 @@
 
 <body>
   <script type="text/javascript">
+  var wizard = {}
+
     var gandalf = {
-      "real name": "Gandalf",
+      "realname": "Pat",
       "age (est)": 11000,
       "race": "Maia",
       "haveRetirementPlan": true,
@@ -22,17 +24,19 @@
       ]
     };
     // bracket notation used to access an object property
-    alert("My name is " + gandalf["real name"]);
+    alert("My name is " + gandalf["realname"]);
+    alert('My name is also ' + gandalf.realname)
 
     // dot notation to interogate an object
     if (gandalf.haveRetirementPlan) {
       // Or with a variable that matches the name of the property
-      var ageProperty = "age (est)";
-      var years = gandalf[ageProperty];
+      //var ageProperty = "age (est)";
+      var years = gandalf["age (est)"];
       alert("My 401k has been gathering interest for " + years + " years!");
     }
 
     // You can access arrays and their properties from an object
+    console.log(aliases.length)
     alert("I have more than " + gandalf.aliases.length + " aliases");
     // Non-existent properties return undefined
     alert("My designation is " + gandalf["fakeproperty"]);
