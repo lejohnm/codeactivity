@@ -6,13 +6,17 @@
   </head>
   <body>
 
-    <h1>Car Adventures!</h1>
-    <h2>Type "h" to honk, "d" to drive to work, "w" to drive around the world, or "t" to get a tuneup.</h2>
-    <h2>See console for car stats.</h2>
+    <h1>Welcome to my Intelligent Car!</h1>
+    <h2> My car is controlled by software </h2>
+    <h3> Try the following commands. Type:</h3>
+    <h4> "h" to honk</h4>
+    <h4> "d" to commute locally</h4>
+    <h4> "w" to drive around the world (whew!)</h4>
+    <h4> "t" to get a tuneup </h4>    
+    <h5>Inspect the console for the latest stats</h5>
 
     <script>
-      // VARIABLES
-      // ==========================================================================
+      // Object      
       var car = {
         make: "Honda",
         model: "Fit",
@@ -53,6 +57,7 @@
       // MAIN PROCESS
       // ==============================================================================
       // Captures keyboard input. Depending on the letter pressed it will "call" (execute) different functions.
+      // onkeyup is an event listener
       document.onkeyup = function(event) {
         // Captures the key press, converts it to lowercase, and saves it to a variable.
         var letter = event.key.toLowerCase();
