@@ -12,19 +12,20 @@
     <h4> "h" to honk</h4>
     <h4> "d" to commute locally</h4>
     <h4> "w" to drive around the world (whew!)</h4>
-    <h4> "t" to get a tuneup </h4>    
+    <h4> "t" to get a tuneup </h4>
+    <h4> "f" to turn the car into a rocket!</h4> 
+    <h4> "l" to land the rocket car at an airport</h4>
     <h5>Inspect the console for the latest stats</h5>
 
     <script>
-      // Object   
-      var mileage = 1000000
-      var truck = {}   
+      
       var car = {
         make: "Honda",
         model: "Fit",
         color: "Blue Raspberry",
         mileage: 3000,
         isWorking: true,
+        isFlying: false,
         driveToWork: function() {
           alert("Old Mileage: " + this.mileage);
           this.mileage = this.mileage + 8;
@@ -43,6 +44,22 @@
         },
         honk: function() {
           alert("Honk! Honk!");
+        },
+        flyTheCar: function() {
+          if (this.isFlying) {
+            alert("Hey - I am already flying!")
+          } else {
+            this.isFlying = true
+            alert("This is so COOL - I am flying!")
+          }          
+        },
+        landTheCar: function() {
+          if (this.isFlying) {
+            alert("Whew! Just landed at CLT airport!")
+            this.isFlying = false
+          } else {            
+            alert("Wait - I am not flying ... so I cannot land")
+          }          
         }
       };
       // FUNCTIONS
@@ -54,16 +71,18 @@
         console.log("Color:" + car.color);
         console.log("Mileage: " + car.mileage);
         console.log("Is Working: " + car.isWorking);
+        console.log("Is Flying: " + car.isFlying);
         console.log("------------------------------");
       }
       // MAIN PROCESS
       // ==============================================================================
-      // Captures keyboard input. Depending on the letter pressed it will "call" (execute) different functions.
-      // onkeyup is an event listener
-      document.onkeyup = function(event) {
-        console.log(event)
+      // Captures keyboard input. Depending on the letter pressed it will "call" (execute) 
+      // different functions.
+      // Read more about the onkey events at https://www.w3schools.com/jsref/event_onkeyup.asp
+      
+      document.onkeyup = function(e) {
         // Captures the key press, converts it to lowercase, and saves it to a variable.
-        var letter = event.key.toLowerCase();
+        var letter = e.key.toLowerCase();
         // If the letter is h, run the following functions/methods.
         if (letter === "h") {
           car.honk();
@@ -84,7 +103,14 @@
           car.getTuneUp();
           reWriteStats();
         }
-        document.write('hey you aren\'t following the instructions')
+        if (letter === "f") {
+          car.flyTheCar();
+          reWriteStats();
+        }
+        if (letter === "l") {
+          car.landTheCar();
+          reWriteStats();
+        }
       };
     </script>
 
