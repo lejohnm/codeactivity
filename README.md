@@ -4,7 +4,7 @@
 
 This repo contains the class activities for students in the Road to Hire Code academy.
 
-The repo is updated daily with activity solutions and weekly for new activites.
+The repo is updated daily with class solutions and weekly for new activites.
 
 ## Clone this repo
 
